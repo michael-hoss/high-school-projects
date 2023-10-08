@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion />
+    <MyType>Windows</MyType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DefineTrace>True</DefineTrace>
+    <BuildDependsOn>$(BuildDependsOn);AfterBuildMigrated</BuildDependsOn>
+    <UseWindowsForms>True</UseWindowsForms>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>False</GenerateTargetFrameworkAttribute>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugType>full</DebugType>
+    <DefineDebug>True</DefineDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+  </PropertyGroup>
+  <Target Name="BeforeBuildMigrated" BeforeTargets="PreBuildEvent" />
+  <Target Name="AfterBuildMigrated" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Gui.Controls\UpgradeHelpers.Gui.Controls.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Gui.ContainerHelper\UpgradeHelpers.Gui.ContainerHelper.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Utils\UpgradeHelpers.Utils.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Gui.Graphics\UpgradeHelpers.Gui.Graphics.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.SupportHelper\UpgradeHelpers.SupportHelper.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Utils.ReflectionHelper\UpgradeHelpers.Utils.ReflectionHelper.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Utils.CursorHelper\UpgradeHelpers.Utils.CursorHelper.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.Gui.Utils\UpgradeHelpers.Gui.Utils.csproj" />
+    <ProjectReference Include="..\..\UpgradeSupport\UpgradeHelpers.NotUpgradeHelper\UpgradeHelpers.NotUpgradeHelper.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="*_UpgradeReport.htm" />
+    <None Remove="*_status.xml" />
+    <None Remove="*.migrationstatus" />
+    <None Remove="HighSchoolProjectsSupport.log" />
+    <None Remove="_UpgradeReport_Files\**" />
+    <Compile Remove="_UpgradeReport_Files\**" />
+    <EmbeddedResource Remove="_UpgradeReport_Files\**" />
+    <None Remove="HighSchoolProjectsSupport\**" />
+    <Compile Remove="HighSchoolProjectsSupport\**" />
+    <EmbeddedResource Remove="HighSchoolProjectsSupport\**" />
+    <None Remove="packages\**" />
+    <Compile Remove="packages\**" />
+    <EmbeddedResource Remove="packages\**" />
+  </ItemGroup>
+</Project>

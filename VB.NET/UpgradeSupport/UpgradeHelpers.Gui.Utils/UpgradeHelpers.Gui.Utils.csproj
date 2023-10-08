@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>UpgradeHelpers.Gui.Utils</AssemblyName>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>UpgradeHelpers.Gui.Utils</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DefineConstants>TRACE</DefineConstants>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <PackageId>Mobilize.VBUC.Helpers.Gui.Utils</PackageId>
+    <title>Mobilize.VBUC.Helpers.Gui.Utils</title>
+    <Description>Nuget for Gui Utils Helper $(InformationalVersion)</Description>
+    <PackageIconUrl>https://mobilize.blob.core.windows.net/qaimages/mobilize_email_imgs/Logos/3bars-Icon.png</PackageIconUrl>
+    <Product>Mobilize.Net VBUC UpgradeHelpers</Product>
+    <Company>Mobilize.net</Company>
+    <Authors>Mobilize.net</Authors>
+    <Copyright>Copyright (c) Mobilize.net. All rights reserved.</Copyright>
+    <PackageTags>Mobilize VBUC Gui Utils Helper</PackageTags>
+    <IsPackable>true</IsPackable>
+    <Version>$(GitVersion_FullSemVer)</Version>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <IncludeSource>False</IncludeSource>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageOutputPath>..\..\artifacts</PackageOutputPath>
+    <DefineConstants>NET_CORE_APP;$(DefineConstants)</DefineConstants>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UpgradeHelpers.Utils\UpgradeHelpers.Utils.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

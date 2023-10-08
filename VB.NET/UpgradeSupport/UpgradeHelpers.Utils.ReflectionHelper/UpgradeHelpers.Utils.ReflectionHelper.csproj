@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <AssemblyName>UpgradeHelpers.Utils.ReflectionHelper</AssemblyName>
+    <RootNamespace>UpgradeHelpers.Utils.ReflectionHelper</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DefineConstants>TRACE</DefineConstants>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <PackageId>Mobilize.VBUC.Helpers.Utils.ReflectionHelper</PackageId>
+    <title>Mobilize.VBUC.Helpers.Utils.ReflectionHelper</title>
+    <Description>Nuget for Reflection Helper $(InformationalVersion)</Description>
+    <PackageIconUrl>https://mobilize.blob.core.windows.net/qaimages/mobilize_email_imgs/Logos/3bars-Icon.png</PackageIconUrl>
+    <Product>Mobilize.Net VBUC UpgradeHelpers</Product>
+    <Company>Mobilize.net</Company>
+    <Authors>Mobilize.net</Authors>
+    <Copyright>Copyright (c) Mobilize.net. All rights reserved.</Copyright>
+    <PackageTags>Mobilize VBUC Reflection Helper</PackageTags>
+    <IsPackable>true</IsPackable>
+    <Version>$(GitVersion_FullSemVer)</Version>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <IncludeSource>False</IncludeSource>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageOutputPath>..\..\artifacts</PackageOutputPath>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.0' Or '$(TargetFramework)'=='netcoreapp3.1' Or '$(TargetFramework)'=='net5.0-windows' Or '$(TargetFramework)'=='net6.0-windows' Or '$(TargetFramework)'=='net7.0-windows'">
+    <DefineConstants>NET_CORE_APP;WINFORMS;$(DefineConstants)</DefineConstants>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0' Or '$(TargetFramework)'=='net5.0' Or '$(TargetFramework)'=='net6.0' Or '$(TargetFramework)'=='net7.0'">
+    <DefineConstants>NET_STANDARD_APP;$(DefineConstants)</DefineConstants>
+    <UseWindowsForms>false</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Mappings.xml" />
+    <None Remove="DefaultProperties.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultProperties.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.4.0" />
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UpgradeHelpers.Utils\UpgradeHelpers.Utils.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' Or '$(TargetFramework)'=='net5.0-windows' Or '$(TargetFramework)'=='net6.0-windows' Or '$(TargetFramework)'=='net7.0-windows'">
+    <ProjectReference Include="..\UpgradeHelpers.Utils.CursorHelper\UpgradeHelpers.Utils.CursorHelper.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

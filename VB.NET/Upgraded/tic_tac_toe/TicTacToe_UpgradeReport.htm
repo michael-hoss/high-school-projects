@@ -1,0 +1,123 @@
+﻿<html>
+	<head>
+		<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="_UpgradeReport_Files\UpgradeReport.css">
+		<title>TicTacToe.vbp Upgrade Report</title>
+		
+		<script language="javascript">
+			function outliner () {
+				oMe = window.event.srcElement
+				//get child element
+				var child = document.all[event.srcElement.getAttribute("child",false)];
+				//if child element exists, expand or collapse it.
+				if (null != child)
+					child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+			}
+		
+			function changepic() {
+				uMe = window.event.srcElement;
+				var check = uMe.src.toLowerCase();
+				if (check.lastIndexOf("upgradereport_plus.gif") != -1)
+				{
+					uMe.src = "_UpgradeReport_Files/UpgradeReport_Minus.gif"
+				}
+				else
+				{
+					uMe.src = "_UpgradeReport_Files/UpgradeReport_Plus.gif"
+				}
+			}
+		</script>
+		
+	</head>
+	<body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();">
+		<h1>Upgrade Report for TicTacToe.vbp</h1>
+		
+		<p><span class="note" id="startTime">
+		<b>Time of Upgrade:  </b>17/10/2023 17:42<br>
+		</span></p>
+		
+		<h2>List of Project Files</h2>
+		<table cellpadding="2" cellspacing="0" width="98%" border="1"bordercolor="white" class="infotable">
+			<tr>
+				<td nowrap class="header">New Filename</td>
+				<td nowrap class="header">Original Filename</td>
+				<td nowrap class="header">File Type</td>
+				<td nowrap class="header">Status</td>
+				<td nowrap class="header">Errors</td>
+				<td nowrap class="header">Warnings</td>
+				<td nowrap class="header">Total Issues</td>
+			</tr>
+		<tr class="row">
+			<td class="content"><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="_UpgradeReport_Files/UpgradeReport_Plus.gif" width="9" child="issue0">&nbsp;(Global Issues)</td>
+			<td class="content"></td>
+			<td class="content"></td>
+			<td class="content">
+		</td>	<td class="content">0</td>
+			<td class="content">0</td>
+			<td class="content">0</td>
+		</tr>
+			<tr class="collapsed" id="issue0" bgcolor="#ffffff"><td colspan="8">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="8" class="issuetitle">Global update issues:</td></tr><tr><td class="issuenone">None</td></tr>
+				</table>
+			</td></tr>
+		<tr class="row">
+			<td class="content"><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="_UpgradeReport_Files/UpgradeReport_Plus.gif" width="9" child="issue1">&nbsp;frmMain.vb</td>
+			<td class="content">frmMain.frm</td>
+			<td class="content">Form</td>
+			<td class="content">
+		Upgraded with issues</td>	<td class="content">2</td>
+			<td class="content">1</td>
+			<td class="content">3</td>
+		</tr>
+			<tr class="collapsed" id="issue1" bgcolor="#ffffff"><td colspan="8">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="8" class="issuetitle">Upgrade Issues for frmMain.frm:</td></tr><tr><td width="10" class="issuehdr">#</td><td class="issuehdr" nowrap>Severity</td><td class="issuehdr">Location</td><td class="issuehdr">Object Type</td><td class="issuehdr">Object Name</td><td class="issuehdr">Property</td><td class="issuehdr">Description</td><td class="issuehdr">Qty</td></tr>
+					<tr><td width="10" class="issuecontent">1</td><td class="issuecontent" nowrap>Design Error</td><td class="issuecontent">(Layout)</td><td class="issuecontent">Line</td><td class="issuecontent">Line1</td><td class="issuecontent">BorderWidth</td><td class="issuecontent"><a href='https://docs.mobilize.net/vbuc/ewis#2064'>Line property Line1.BorderWidth was not upgraded.</a></td><td class="issuecontent">1</td></tr>
+					<tr><td width="10" class="issuecontent">2</td><td class="issuecontent" nowrap>Design Error</td><td class="issuecontent">(Layout)</td><td class="issuecontent">Line</td><td class="issuecontent">Line2</td><td class="issuecontent">BorderWidth</td><td class="issuecontent"><a href='https://docs.mobilize.net/vbuc/ewis#2064'>Line property Line2.BorderWidth was not upgraded.</a></td><td class="issuecontent">1</td></tr>
+					<tr><td width="10" class="issuecontent">3</td><td class="issuecontent" nowrap>Runtime Warning</td><td class="issuecontent">Form_Load</td><td class="issuecontent">Form</td><td class="issuecontent"></td><td class="issuecontent">Load</td><td class="issuecontent"><a href='https://docs.mobilize.net/vbuc/ewis#2080'>Form_Load event was upgraded to Form_Load method and has a new behavior.</a></td><td class="issuecontent">1</td></tr>
+				</table>
+			</td></tr>
+		<tr class="row">
+			<td class="content"><IMG alt="expand/collapse section" class="expandable" height="11"onclick=changepic() src="_UpgradeReport_Files/UpgradeReport_Plus.gif" width="9" child="issue2">&nbsp;Module1.vb</td>
+			<td class="content">Module1.bas</td>
+			<td class="content">Module</td>
+			<td class="content">
+		Upgraded with issues</td>	<td class="content">0</td>
+			<td class="content">1</td>
+			<td class="content">1</td>
+		</tr>
+			<tr class="collapsed" id="issue2" bgcolor="#ffffff"><td colspan="8">
+				<table width="97%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+				<tr><td colspan="8" class="issuetitle">Upgrade Issues for Module1.bas:</td></tr><tr><td width="10" class="issuehdr">#</td><td class="issuehdr" nowrap>Severity</td><td class="issuehdr">Location</td><td class="issuehdr">Object Type</td><td class="issuehdr">Object Name</td><td class="issuehdr">Property</td><td class="issuehdr">Description</td><td class="issuehdr">Qty</td></tr>
+					<tr><td width="10" class="issuecontent">1</td><td class="issuecontent" nowrap>Runtime Warning</td><td class="issuecontent">Main</td><td class="issuecontent"></td><td class="issuecontent"></td><td class="issuecontent"></td><td class="issuecontent"><a href='https://docs.mobilize.net/vbuc/ewis#1047'>Application will terminate when Sub Main() finishes.</a></td><td class="issuecontent">1</td></tr>
+				</table>
+			</td></tr>
+		<tr valign="top">
+			<td class="foot" id="fileCount">2 File(s)</td>
+			<td class="foot">&nbsp;</td>
+			<td class="foot">Modules: 1<br>Forms: 1</td>
+			<td class="foot"id="filesMigrated">
+		Upgraded: 2<BR>
+		Not upgraded: 0
+		</td>
+			<td class="foot">2</td>
+			<td class="foot">2</td>
+			<td class="foot">4</td>
+		</tr>
+		</table>
+		<p class="help">
+		</p>
+				<p>
+					<table class = "note">
+						<tr><td nowrap><b>Upgrade Settings</b></td></tr>
+						<tr id="logFile"><td nowrap><b>Log File:</b> TicTacToe.log</td></tr>
+						<tr ><td nowrap><b>Migrate Project To:</b> WinExe</td></tr>
+						<tr ><td nowrap><b>Output Directory:</b> C:\Users\hossm\git\high-school-projects\VB.NET\Upgraded\tic_tac_toe\</td></tr>
+						<tr id="outputName"><td nowrap><b>Output Name:</b> TicTacToe.vbproj</td></tr>
+						<tr id="projectName"><td nowrap><b>Project Name:</b> TicTacToe</td></tr>
+						<tr ><td nowrap><b>Project Path:</b> C:\Users\hossm\git\high-school-projects\VB6.0\tic_tac_toe\TicTacToe.vbp</td></tr>
+					</table>
+				</p>
+	</body>
+</html>

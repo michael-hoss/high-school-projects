@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>UpgradeHelpers.Gui.ContainerHelper</AssemblyName>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>UpgradeHelpers.Gui.ContainerHelper</RootNamespace>
+    <PackageId>Mobilize.VBUC.Helpers.Gui.ContainerHelper</PackageId>
+    <title>Mobilize.VBUC.Helpers.Gui.ContainerHelper</title>
+    <Description>Nuget for Gui.ContainerHelper Helper $(InformationalVersion)</Description>
+    <PackageIconUrl>https://mobilize.blob.core.windows.net/qaimages/mobilize_email_imgs/Logos/3bars-Icon.png</PackageIconUrl>
+    <Product>Mobilize.Net VBUC UpgradeHelpers</Product>
+    <Company>Mobilize.net</Company>
+    <Authors>Mobilize.net</Authors>
+    <Copyright>Copyright (c) Mobilize.net. All rights reserved.</Copyright>
+    <PackageTags>Mobilize VBUC Gui.ContainerHelper Helper</PackageTags>
+    <IsPackable>true</IsPackable>
+    <Version>$(GitVersion_FullSemVer)</Version>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <IncludeSource>False</IncludeSource>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageOutputPath>..\..\artifacts</PackageOutputPath>
+    <DefineConstants>NET_CORE_APP;$(DefineConstants)</DefineConstants>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UpgradeHelpers.Utils\UpgradeHelpers.Utils.csproj" />
+  </ItemGroup>
+</Project>
