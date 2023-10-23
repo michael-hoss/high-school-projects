@@ -1,6 +1,6 @@
 # High School Coding Projects
 
-<img src="/VB.NET/Upgraded/jump_and_run/jump_and_run.gif" width="24%"/> <img src="/VB6.0/tetris/tetris.gif" width="17.8%"/> <img src="/Excel/snake/snake_excel.gif" width="26%"/> <img src="/VB6.0/buzz_wire/buzz_wire.gif" width="29%"/>
+<img src="/VB.NET/Upgraded/jump_and_run/jump_and_run_small.gif" width="24%"/> <img src="/VB6.0/tetris/tetris.gif" width="17.8%"/> <img src="/Excel/snake/snake_excel.gif" width="26%"/> <img src="/VB6.0/buzz_wire/buzz_wire.gif" width="29%"/>
 
 ## Background 
 
