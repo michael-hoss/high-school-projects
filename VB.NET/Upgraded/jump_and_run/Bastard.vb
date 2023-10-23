@@ -82,13 +82,12 @@ Partial Friend Class Bastard
         'This is why the margins below and to the right are so huge here.
         Unten = 2500
         Rechts = 1200
+        Form_Resize_Actions()
+
     End Sub
 
 
-
-
-    Private isInitializingComponent As Boolean
-    Private Sub Form_Resize(ByVal eventSender As Object, ByVal eventArgs As EventArgs) Handles MyBase.Resize
+    Private Sub Form_Resize_Actions()
         If isInitializingComponent Then
             Exit Sub
         End If
@@ -161,6 +160,11 @@ Partial Friend Class Bastard
             'UPGRADE_ISSUE: (2064) Line property linRechts.X1 was not upgraded. More Information: https://docs.mobilize.net/vbuc/ewis#2064
             imgHindernis(CInt(a)).Left = linRechts.getX1() / 15
         Next a
+    End Sub
+
+    Private isInitializingComponent As Boolean
+    Private Sub Form_Resize(ByVal eventSender As Object, ByVal eventArgs As EventArgs) Handles MyBase.Resize
+        Form_Resize_Actions()
 
     End Sub
 

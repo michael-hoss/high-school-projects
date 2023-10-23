@@ -449,7 +449,6 @@ Partial Class Bastard
         Name = "Bastard"
         RightToLeft = RightToLeft.No
         Text = "Jump and Run von Micha"
-        WindowState = FormWindowState.Maximized
         CType(imgGewonnen, ComponentModel.ISupportInitialize).EndInit()
         CType(imgVerloren, ComponentModel.ISupportInitialize).EndInit()
         CType(imgHilfe, ComponentModel.ISupportInitialize).EndInit()
