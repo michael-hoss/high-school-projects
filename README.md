@@ -1,6 +1,6 @@
 # High School Coding Projects
 
-(Include gif of tetris and snake)
+<img src="/VB6.0/tetris/tetris.gif" width="37.7%"/> <img src="/Excel/snake/snake_excel.gif" width="55%"/>
 
 ## Background 
 
