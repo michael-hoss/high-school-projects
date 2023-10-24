@@ -1,1 +1,0 @@
-(%unit (%imports) (%package "UnsafeNative") (%module (%attribute-list (%attribute (%id "System.Security.SuppressUnmanagedCodeSecurity"))) "winmm" (%public) (%declare (%method "sndPlaySound" (%int) (%args (%variable (%byval) (%var "lpszSoundName") (%string)) (%variable (%byval) (%var "uFlags") (%int))) nil) "Winmm" "sndPlaySoundA")))

@@ -1,1 +1,0 @@
-(%unit (%imports) (%package "SafeNative") (%module "winmm" (%public) (%method "sndPlaySound" (%int) (%args (%variable (%byref) (%var "lpszSoundName") (%string)) (%variable (%byval) (%var "uFlags") (%int))) (%seq [%return (%call (%id "HighSchoolProjectsSupport.UnsafeNative.winmm.sndPlaySound") (%param (%id "lpszSoundName") (%id "uFlags")))]) (%public))))
