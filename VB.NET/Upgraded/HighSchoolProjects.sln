@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 17
 Project("{F184B08F-C81C-45f6-A57F-5ABD9991F28F}") = "Der hei�e Draht", "buzz_wire\Der hei�e Draht.vbproj", "{40DB8403-9DD7-4D0B-B697-CB8E986EF30F}"
 EndProject
-Project("{F184B08F-C81C-45f6-A57F-5ABD9991F28F}") = "Bonies Ultra Spiel", "jump_and_run\Bonies Ultra Spiel.vbproj", "{49811E57-3FFD-4512-81B5-3DE6A9EF0DC9}"
+Project("{F184B08F-C81C-45f6-A57F-5ABD9991F28F}") = "JumpAndRun", "jump_and_run\JumpAndRun.vbproj", "{49811E57-3FFD-4512-81B5-3DE6A9EF0DC9}"
 EndProject
 Project("{F184B08F-C81C-45f6-A57F-5ABD9991F28F}") = "Tetris", "tetris\Tetris.vbproj", "{8519BB9C-8A41-4A86-B19B-CE9A0524DAB4}"
 EndProject

@@ -62,15 +62,11 @@
     <EmbeddedResource Update="Bastard.resX">
       <DependentUpon>Bastard.vb</DependentUpon>
     </EmbeddedResource>
-    <None Include="Bonies Ultra Spiel_UpgradeReport.htm">
-      <Subtype>Preview</Subtype>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Remove="*_UpgradeReport.htm" />
     <None Remove="*_status.xml" />
     <None Remove="*.migrationstatus" />
-    <None Remove="Bonies Ultra Spiel.log" />
     <None Remove="_UpgradeReport_Files\**" />
     <Compile Remove="_UpgradeReport_Files\**" />
     <EmbeddedResource Remove="_UpgradeReport_Files\**" />
