@@ -2,7 +2,7 @@
 
 <img src="/VB.NET/Upgraded/jump_and_run/jump_and_run_small.gif" width="24%"/> <img src="/VB6.0/tetris/tetris.gif" width="17.8%"/> <img src="/Excel/snake/snake_excel.gif" width="26%"/> <img src="/VB6.0/buzz_wire/buzz_wire.gif" width="29%"/>
 
-## Play the games yourself
+## Play the games yourself 
 Check out the GitHub releases for Windows `.exe` files, which all run smoothly on my Windows 11 machine. I included:
 - the VB 6.0 executables from 2011
 - some upgraded VB.NET executables from 2023
