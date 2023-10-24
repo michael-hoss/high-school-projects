@@ -26,7 +26,10 @@ After that internship, I was on fire and subsequently coded my own version of Te
 I originally developed these projects between 2009 and 2011 in Visual Basic (VB) 6.0 and Excel with VBA 6.0 macros. I decided to publish them in 2023, when the ancient 32 bit 6.0 versions of VB/VBA are no longer supported. Therefore, I upgraded a lot of the code to VB.NET (using the [Mobilize.Net's Visual Basic Upgrade Companion (VBUC)](https://www.mobilize.net/products/app-migrations/vbuc)) to make sure everything still runs on my Windows 11 machine. Ironically, Microsoft also seems to deprecate VB.NET in favor of C#, but VB.NET was still the most straightforward target language to me, as it is closer to VB 6.0 and I won't support this anyway.
 
 
-Running any code here is at your own risk (with my best intentions, I am pretty sure that nothing bad will happen to your system, though). Note that the executables based on VB 6.0 should also still work on 64bit Windows 11 machines.
+Running any code here is at your own risk (with my best intentions, I am pretty sure that nothing bad will happen to your system, though).
+
+The tooling round modernizing VB 6.0 applications also seems to enable migrating these old Desktop applications to the web (both the code upgrade tools and Visual Studio 2022). The most straightforward way would probably be upgrading to C# and then hosting it on Azure. 
+However, the effort of dealing with this hasn't yet been worth it for me.
 
 # Individual Games
 
@@ -38,7 +41,7 @@ Running any code here is at your own risk (with my best intentions, I am pretty 
 My very first game! As you might notice, I did it at a time when we did a lot of sine and cosine in school, so here I could finally do something with it. 
 
 Notes:
-- In your Windows keyboard settings, *set the key press repetition delay to minimum and repetition rate to maximum*. This will let your figure move faster, as I capture the keyboard input through a hidden text field. This works based on the characters' ASCII keys and means that all of my games work with W-A-S-D as input keys, rather than arrow keys, which would not have ASCII keys. 
+- In your Windows keyboard settings, *set the key press repetition delay to minimum and repetition rate to maximum*. This will let your figure move faster.
 - Hit this red `+30` seconds box, otherwise time is too short. 
 - Unlock the goal by going to the `frei schalten` field before.
 - In case the free floating bars are at unfavorable positions, reaching the goal is not meant to be (typically, this happens in the first round after starting the program).
@@ -58,8 +61,9 @@ Notes:
 ### Snake (Excel)
 <img src="/Excel/snake/snake_excel.gif" width="40%"/>
 
-Together with a friend, I handed this in for a computer science submission that we had to do in Excel with VBA. The grid-like structure of an Excel sheet was perfect to migrate the VB 6.0 Snake there.This time, I could also include the high score into the program itself. Unfortunately, no multi player, though. 
+Together with a friend, I handed this in for a computer science submission that we had to do in Excel with VBA. The grid-like structure of an Excel sheet was perfect to migrate the VB 6.0 Snake there. This time, I could also include the high score into the program itself. 
 Notes:
+- Unfortunately, no multi player
 - Whenever somebody tells me VBA is boring, I tell them they should try doing Snake in Excel first.
 - I also wanted to do put Tetris into Excel, but somehow, it never got enough priority for me. 
 
@@ -113,3 +117,10 @@ For the old executable from VB6.0, the sound files have the be in the same direc
 <img src="VB6.0//tic_tac_toe/tictactoe_vb.gif" width="40%"/>
 
 Only here for completeness (and to try the VB6.0 -> VB.NET upgrade tool with a minimal example).
+
+
+# General Remarks to the Games
+
+- The graphics are generally flickering because I never used a graphics engine. Instead, I just used picture boxes and changed their X and Y coordinates in a recurring timer function. I guess these picture boxes are not meant to be moved around every couple of milliseconds. 
+- I capture the user's keyboard input through a hidden text field. This works based on the characters' ASCII keys and means that all of my games work with W-A-S-D as input keys, rather than arrow keys, which would not have ASCII keys. 
+- Even though some code structures, variable scopes, and naming conventions seem strange for me today, the code should still be fairly readable (in German).
